@@ -7,7 +7,6 @@ class GenreCreateListView(generics.ListCreateAPIView):
     """
     Endpoint reponsavel por listar os generos disposniveis com GET e adicionar novos com POST.
     """
-    
     queryset = Genre.objects.all()
     serializer_class = GenrerSerializer
 
