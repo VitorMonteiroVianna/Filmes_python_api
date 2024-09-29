@@ -20,7 +20,7 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', RedirectView.as_view(url='/redoc/', permanent=False)), #Faz com que ao bater na raiz do projeto, va para a documentação
+    path('', RedirectView.as_view(url='/swagger/', permanent=False)), #Faz com que ao bater na raiz do projeto, va para a documentação
     
     re_path(r'^swagger(?P<format>\.json|\.yaml)$', schema_view.without_ui(cache_timeout=0), name='schema-json'),
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
