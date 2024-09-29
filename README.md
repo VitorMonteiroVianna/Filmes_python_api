@@ -19,16 +19,15 @@ Este é um projeto Django que implementa uma API REST para gerenciar filmes, gê
 - **Campos Calculados:**
   - Alguns campos são calculados diretamente nos **serializers**, como a média de avaliações (reviews) de um filme.
 
+- **Token JWT**
+  - A API itliza um token JWT para liberar o uso dos endpoints. Para gerar ele basta ter um usuario cadastrado e passar o token gerado via "Barer Token"
+
 ## Documentação da API
 
 A API possui documentação acessível nos seguintes endpoints:
 
 - **Swagger UI:** [http://127.0.0.1:8000/swagger/](http://127.0.0.1:8000/swagger/)
 - **ReDoc UI:** [http://127.0.0.1:8000/redoc/](http://127.0.0.1:8000/redoc/)
-
-## Testes na Interface do Django REST
-
-Ao acessar qualquer endpoint da API, a interface do Django Rest Framework permite que você faça requisições diretamente na interface web, facilitando os testes das funcionalidades.
 
 ## Passo a Passo para Instalação e Execução do Projeto
 
@@ -66,8 +65,8 @@ Após instalar as dependências, você precisa aplicar as migrações para confi
 python manage.py migrate
 ```
 
-### 5. Criar Superusuário (Opcional)
-Se desejar acessar o Django Admin, crie um superusuário:
+### 5. Criar Superusuário
+Crie um superusuario, para poder usar o endpoint de Authentication e acessar os endpoints da API:
 ```bash
 python manage.py createsuperuser
 ```
